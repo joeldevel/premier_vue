@@ -9,12 +9,31 @@
     <div id="app">
       {{ message }}
     </div>
+    <hr>
+    <div id="app2">
+      <ul>
+        <li v-for='color in colors'>
+          {{ color.name }}
+        </li>
+      </ul>
+    </div>
 
     <script type="text/javascript">
       var app = new Vue({
         el: '#app',
         data: {
           message: 'Welcome to the void!'
+        }
+      })
+      var app2 = new Vue({
+        el: '#app2',
+        data: {
+          colors:[
+            { name: "red"},
+            { name: "dodgerblue"},
+            { name: "orangered"},
+            { name: "plum"}
+          ]
         }
       })
     </script>
